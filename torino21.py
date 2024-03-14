@@ -21,6 +21,7 @@ def send_webhook_message(message):
 def main():
     url = "https://www.montagneparfums.com/fragrance/torino-2021"
     while True:
+        send_webhook_message("Checking")
         if not check_sold_out_change(url):
             send_webhook_message("@here The product is in stock!")
         time.sleep(300)
